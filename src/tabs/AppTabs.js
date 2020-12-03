@@ -3,8 +3,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import HomeStack from "../stacks/HomeStack";
-import Settings from "../components/Settings";
-import Search from "../components/Search";
+import SettingsStack from "../stacks/SettingsStack";
+import SearchStack from "../stacks/SearchStack";
 
 
 const Tabs = createBottomTabNavigator();
@@ -35,8 +35,8 @@ const AppTabs = props => {
             }}
         >
             <Tabs.Screen name={"Home"} component={HomeStack} />
-            <Tabs.Screen name={"Search"} component={Search} />
-            <Tabs.Screen name={"Settings"} component={Settings} />
+            <Tabs.Screen name={"Search"} component={SearchStack} />
+            <Tabs.Screen name={"Settings"} component={SettingsStack} />
         </Tabs.Navigator>
     )
 };

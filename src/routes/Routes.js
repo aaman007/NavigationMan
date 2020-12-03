@@ -5,11 +5,11 @@ import AsyncStorage from "@react-native-community/async-storage";
 
 import { NavigationContainer } from "@react-navigation/native";
 
-import { AuthContext } from "./providers/AuthProvider";
+import { AuthContext } from "../providers/AuthProvider";
 
-import Center from "./utils/Center";
-import AppTabs from "./tabs/AppTabs";
-import AuthStack from "./stacks/AuthStack";
+import Center from "../utils/Center";
+import AppTabs from "../tabs/AppTabs";
+import AuthStack from "../stacks/AuthStack";
 
 
 const Routes = props => {

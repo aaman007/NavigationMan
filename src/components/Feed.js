@@ -1,11 +1,23 @@
 import React from 'react';
 import Center from "../utils/Center";
-import { Text } from "react-native";
+import { FlatList, Button } from "react-native";
+import faker from 'faker';
 
 const Feed = props => {
     return (
         <Center>
-            <Text> News Feed </Text>
+            <FlatList
+                style={{width: '100%'}}
+                renderItem={({item}) => {
+                    return (
+                        <Button title={item} onPress={() => props.navigation.navigate('ProductDetails', {
+                            name: item
+                        })} />
+                    )
+                }}
+                keyExtractor={(product, index) => product + index}
+                data={Array.from(Array(50), () => faker.commerce.product())}
+            />
         </Center>
     )
 };

@@ -2,18 +2,18 @@ import React from 'react';
 
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Feed from "../components/Feed";
+import Search from "../components/Search";
 import { addProductRoutes } from "../routes/addProductRoutes";
 
 const Stack = createStackNavigator();
 
-const HomeStack = props => {
+const SearchStack = props => {
     return (
-        <Stack.Navigator initialRouteName={"News Feed"}>
+        <Stack.Navigator initialRouteName={"Search"}>
+            <Stack.Screen name={"Search"} component={Search} />
             {addProductRoutes(Stack)}
-            <Stack.Screen name={"News Feed"} component={Feed} />
         </Stack.Navigator>
     )
 };
 
-export default HomeStack;
+export default SearchStack;
