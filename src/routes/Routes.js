@@ -10,6 +10,7 @@ import { AuthContext } from "../providers/AuthProvider";
 import Center from "../utils/Center";
 import AppTabs from "../tabs/AppTabs";
 import AuthStack from "../stacks/AuthStack";
+import MainDrawers from "../drawers/MainDrawers";
 
 
 const Routes = props => {
@@ -39,7 +40,7 @@ const Routes = props => {
 
     return (
         <NavigationContainer>
-            {user ? <AppTabs /> :<AuthStack />}
+            {user ? <AppTabs /> : <AuthStack />}
         </NavigationContainer>
     )
 };
